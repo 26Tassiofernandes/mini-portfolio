@@ -1,0 +1,168 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+
+/* ========= CORPO PRINCIPAL ========= */
+
+body {
+    font-family: 'VT323', monospace;
+    color: white;
+    background: black url(../images/background.png) center center no-repeat fixed;
+    background-size: cover;
+    font-size: 18px;
+    padding: 30px;
+    overflow-y: hidden;
+
+    /*Centralizando o cartão*/
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    
+
+}
+
+/* ========= PERSONALIZANDO O CARTÃO ========= */
+
+main.cartao-portfolio {
+    border-radius: 10px;
+    border: 2px solid #4545ee;
+    background-color: #070d12;
+    width: 370px;
+    overflow: hidden; /*Para o conteúdo caber dentro do cartão e não vazar nada fora*/
+}
+
+/* ========= PERSONALIZANDO MINHAS INFORMAÇÕES (FOTO DE PERFIL, NOME, CARGO) ========= */
+
+main div.minhas-informacoes {
+    padding: 20px 0px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px 15px 0px 0px;
+    text-align: center;
+    gap: 10px;
+}
+
+/* ========= PERSONALIZANDO MINHA BORDA DA FOTO DE PERFIL ========= */
+
+main div.minhas-informacoes img {
+    border-radius: 50%;
+    border: 4px solid #4545ee;
+    width: 150px;
+}
+
+/* ====== MUDANDO O TAMANHO DA FONTE DO NOME ====== */
+
+main div.minhas-informacoes .nome {
+    font-size: 26px;
+}
+
+/* ====== MUDANDO O TAMANHO DA FONTE DO CARGO ====== */
+
+main div.minhas-informacoes .cargo {
+    font-size: 20px;
+    color: #b8bbc5;
+}
+
+/* ===== CONTEÚDO DAS ABAS ===== */
+
+main div.conteudo {
+    margin-top: 15px;
+}
+
+main ul.abas { /*Os 2 ícones da página (descriçao e a espada)*/
+    display: flex;
+}
+
+main .aba {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+main ul.abas img {
+    width: 70px;
+}
+
+main .aba.selecionada {
+    background-color: #262626;
+}
+
+main .aba:hover {
+    background-color: #414141;
+}
+
+.informacoes-abas {
+    background-color: #262626;
+}
+
+.informacoes-abas .informacao {
+    min-height: 260px;
+    padding: 15px;
+    display: none;
+}
+
+.informacoes-abas .sub-titulo {
+    font-size: 22px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.informacoes-abas .descricao {
+    font-size: 20px;
+    text-align: justify;
+    max-height: 180px;
+    overflow-y: auto; /*Para surgir um pequeno scroll na descrição*/
+    padding-right: 15px;
+}
+
+.informacoes-abas .descricao span {
+    color: #4545ee;
+}
+
+/* ==== INFORMAÇÕES DAS REDES SOCIAIS E LINKS ==== */
+
+.informacoes-abas .redes-sociais {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    max-height: 180px;
+    overflow-y: auto;
+
+}
+
+.informacoes-abas .redes-sociais li a {
+    width: 250px;
+    background-color: #4545ee;
+    display: block;
+    text-align: center;
+    padding: 10px;
+    color: white;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.informacoes-abas .redes-sociais .curriculo:hover {
+    background-color: #4545ee;
+    opacity: 0.8;
+}
+
+.informacoes-abas .redes-sociais .github:hover {
+    background-color: #545454;
+    opacity: 0.8;
+}
+
+.informacoes-abas .redes-sociais .linkedin:hover {
+    background-color: #1d87bd;
+    opacity: 0.8;
+}
+
+.informacoes-abas .informacao.selecionada {
+    display: block;
+}
